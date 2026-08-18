@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prtls-calendar"
+version = "0.1.0"
+description = "Graph-native calendar domain for the Protellus ecosystem."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.8,<3",
+  "prtls-graph @ git+https://github.com/protellus/prtls-graph.git@main",
+  "prtls-graph-operations @ git+https://github.com/protellus/prtls-graph-operations.git@main",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["prtls_calendar", "prtls_calendar.*"]
