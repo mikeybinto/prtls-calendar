@@ -4,6 +4,7 @@ from .actions import CalendarGraphActions
 from .payloads import CalendarEventPayload, CalendarEventType, CalendarPayload, DateSource
 from .relations import CALENDAR, CALENDAR_EVENT, CONTAINS_EVENT
 from .spec import CalendarStorageSpec
+from .specialization import CalendarGraph, DEFAULT_CALENDAR_GRAPH_ID
 
 __all__ = [
     "CALENDAR",
@@ -14,5 +15,7 @@ __all__ = [
     "CalendarGraphActions",
     "CalendarPayload",
     "CalendarStorageSpec",
+    "CalendarGraph",
+    "DEFAULT_CALENDAR_GRAPH_ID",
     "DateSource",
 ]
