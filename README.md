@@ -2,6 +2,14 @@
 
 `prtls-calendar` is the graph-native calendar domain for the Protellus ecosystem.
 
+## Owns / does not own
+
+It owns typed calendar payloads, vocabulary, graph specialization, and native
+graph operations. It does not own storage, tenant identity, provider clients,
+or application/admin workflows; `prtls-graph` owns storage and resolves the
+workspace-scoped graph address from the explicit `graph_id` plus ambient
+organization/workspace identity.
+
 It specializes `prtls-graph` and `prtls-graph-operations` with typed calendar
 payloads, calendar node and edge vocabulary, date invariants, graph bindings, and
 domain actions. Graph storage remains owned by `prtls-graph`.

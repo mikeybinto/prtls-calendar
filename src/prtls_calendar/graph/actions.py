@@ -6,13 +6,13 @@ open transactions or write storage directly; `prtls-graph` owns those mechanics.
 
 from __future__ import annotations
 
-from prtls_graph import GraphEdge, GraphNode, NodeId, NodeRef
+from prtls_graph import GraphActions, GraphEdge, GraphNode, NodeId, NodeRef
 
 from .payloads import CalendarEventPayload, CalendarPayload
 from .relations import CALENDAR, CALENDAR_EVENT, CONTAINS_EVENT
 
 
-class CalendarGraphActions:
+class CalendarGraphActions(GraphActions):
     """Build validated calendar graph elements and delegate graph mutations."""
 
     @staticmethod
